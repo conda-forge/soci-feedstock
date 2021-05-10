@@ -10,16 +10,14 @@ package:
 source:
   url: https://github.com/SOCI/soci/archive/v{{ version }}.tar.gz
   sha256: f293192a412ed82693d17dfe46e2734b140bff835bc3259e3cbd7c315e5e2d74
-  patches:
-    - 0001-Fix-PostgreSQL-tests-build-under-macOS.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: soci-core
     script: build_soci.sh  # [unix]
-    script: bld_soci.bat  # [win]
+    script: bld_soci.bat   # [win]
     requirements:
       build:
         - {{ compiler('cxx') }}
@@ -35,12 +33,12 @@ outputs:
         - if exist %LIBRARY_PREFIX%\bin\soci_core_{{ version_major }}_{{ version_minor }}.dll (exit 0) else (exit 1)  # [win]
 
     about:
-      summary: SOCI is a general purpose database written in C++.
-      doc_source_url: http://soci.sourceforge.net/doc/release/4.0/
+      summary: 'SOCI is a general purpose database written in C++.'
+      doc_source_url:  http://soci.sourceforge.net/doc/release/4.0/
 
   - name: soci-sqlite
     script: build_soci.sh  # [unix]
-    script: bld_soci.bat  # [win]
+    script: bld_soci.bat   # [win]
     requirements:
       build:
         - {{ compiler('cxx') }}
@@ -63,12 +61,12 @@ outputs:
         - if exist %LIBRARY_PREFIX%\bin\soci_sqlite3_{{ version_major }}_{{ version_minor }}.dll (exit 0) else (exit 1)  # [win]
 
     about:
-      summary: soci-sqlite3 contains SOCI core and the implementation of SQLite3 backend.
-      doc_source_url: http://soci.sourceforge.net/doc/release/4.0/
+      summary: 'soci-sqlite3 contains SOCI core and the implementation of SQLite3 backend.'
+      doc_source_url:  http://soci.sourceforge.net/doc/release/4.0/
 
   - name: soci-mysql
     script: build_soci.sh  # [unix]
-    script: bld_soci.bat  # [win]
+    script: bld_soci.bat   # [win]
     requirements:
       build:
         - {{ compiler('cxx') }}
@@ -91,8 +89,8 @@ outputs:
         - if exist %LIBRARY_PREFIX%\bin\soci_mysql_{{ version_major }}_{{ version_minor }}.dll (exit 0) else (exit 1)  # [win]
 
     about:
-      summary: soci-mysql contains SOCI core and the implementation of MySQL backend.
-      doc_source_url: http://soci.sourceforge.net/doc/release/4.0/
+      summary: 'soci-mysql contains SOCI core and the implementation of MySQL backend.'
+      doc_source_url:  http://soci.sourceforge.net/doc/release/4.0/
 
   - name: soci-postgresql
     script: build_soci.sh  # [unix]
@@ -121,14 +119,14 @@ outputs:
         - if exist %LIBRARY_PREFIX%\bin\soci_postgresql_{{ version_major }}_{{ version_minor }}.dll (exit 0) else (exit 1)  # [win]
 
     about:
-      summary: soci-postgresql contains SOCI core and the implementation of PostgreSQL backend.
-      doc_source_url: http://soci.sourceforge.net/doc/release/4.0/
+      summary: 'soci-postgresql contains SOCI core and the implementation of PostgreSQL backend.'
+      doc_source_url:  http://soci.sourceforge.net/doc/release/4.0/
 
 about:
   home: http://soci.sourceforge.net/
   license: BSL-1.0
   license_file: LICENSE
-  summary: SOCI is a general purpose database access library written in C++.
+  summary: 'SOCI is a general purpose database access library written in C++.'
   doc_url: http://soci.sourceforge.net/doc/release/4.0/
 
 extra:
