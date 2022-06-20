@@ -12,7 +12,7 @@ source:
   sha256: 4b1ff9c8545c5d802fbe06ee6cd2886630e5c03bf740e269bb625b45cf934928
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: soci-core
@@ -106,8 +106,7 @@ outputs:
         - soci-core
         - libpq
       run:
-        # libpq does not have a run_exports section
-        - {{ pin_compatible('libpq', max_pin='x.x') }}
+        - libpq
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
