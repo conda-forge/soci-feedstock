@@ -12,7 +12,7 @@ source:
   sha256: 4b1ff9c8545c5d802fbe06ee6cd2886630e5c03bf740e269bb625b45cf934928
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: soci-core
@@ -52,7 +52,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
 
     test:
       commands:
@@ -80,7 +80,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
 
     test:
       commands:
@@ -110,7 +110,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
     test:
       commands:
         - test -f ${PREFIX}/lib/libsoci_postgresql.so  # [linux]
