@@ -52,7 +52,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
 
     test:
       commands:
@@ -80,7 +80,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
 
     test:
       commands:
@@ -110,7 +110,7 @@ outputs:
         # even though soci-core has a_run exports section
         # it seems that it is not taken into account when rendering
         # the recipe.
-        - {{ pin_compatible('soci-core', max_pin='x.x') }}
+        - {{ pin_subpackage('soci-core', max_pin='x.x') }}
     test:
       commands:
         - test -f ${PREFIX}/lib/libsoci_postgresql.so  # [linux]
