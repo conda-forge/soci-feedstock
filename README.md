@@ -1,13 +1,50 @@
-About soci
-==========
-
-Home: 
-
-Package license: 
+About soci-feedstock
+====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/soci-feedstock/blob/main/LICENSE.txt)
 
+About soci
+----------
+
+Home: http://soci.sourceforge.net/
+
+Package license: BSL-1.0
+
+Summary: SOCI is a general purpose database access library written in C++.
+
+Documentation: http://soci.sourceforge.net/doc/release/4.0/
+About soci-core
+---------------
+
+
+
+Package license: 
+
 Summary: SOCI is a general purpose database written in C++.
+About soci-mysql
+----------------
+
+
+
+Package license: 
+
+Summary: soci-mysql contains SOCI core and the implementation of MySQL backend.
+About soci-postgresql
+---------------------
+
+
+
+Package license: 
+
+Summary: soci-postgresql contains SOCI core and the implementation of PostgreSQL backend.
+About soci-sqlite
+-----------------
+
+
+
+Package license: 
+
+Summary: soci-sqlite3 contains SOCI core and the implementation of SQLite3 backend.
 
 Current build status
 ====================
@@ -34,10 +71,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11514&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/soci-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11514&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/soci-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11514&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/soci-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11514&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/soci-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
