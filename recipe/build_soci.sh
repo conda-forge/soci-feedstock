@@ -17,16 +17,9 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DSOCI_STATIC=OFF              \
       $SRC_DIR
 
-echo "==============="
-echo $HOST_PLATFORM
-echo $build_platform
-echo $ARCH
-echo $OSX_ARCH
-echo "============="
-
 make -j${CPU_COUNT}
 
-if [[ $PKG_NAME == *"sqlite" || $PKG_NAME == *"core" && $ARCH != "arm64" ]]; then
+if [[ (($PKG_NAME == *"sqlite" || $PKG_NAME == *"core")) && $ARCH != "arm64" ]]; then
 	make check
 fi
 make install
