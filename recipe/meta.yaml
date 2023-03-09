@@ -10,9 +10,11 @@ package:
 source:
   url: https://github.com/SOCI/soci/archive/v{{ version }}.tar.gz
   sha256: 4b1ff9c8545c5d802fbe06ee6cd2886630e5c03bf740e269bb625b45cf934928
+  patches:
+    - patches/01-tests-catch.patch
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: soci-core

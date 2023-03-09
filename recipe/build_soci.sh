@@ -6,7 +6,7 @@ mkdir build; cd build
 
 export CTEST_OUTPUT_ON_FAILURE=1
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
+cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_PREFIX_PATH=$PREFIX    \
       -G "Unix Makefiles"            \
       -DWITH_BOOST=OFF               \
@@ -19,7 +19,7 @@ cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
 
 make -j${CPU_COUNT}
 
-if [[ $PKG_NAME == *"sqlite" || $PKG_NAME == *"core" ]]; then
+if [[ (($PKG_NAME == *"sqlite" || $PKG_NAME == *"core")) && $ARCH != "arm64" ]]; then
 	make check
 fi
 make install
