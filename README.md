@@ -3,6 +3,7 @@ About soci-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/soci-feedstock/blob/main/LICENSE.txt)
 
+
 About soci
 ----------
 
@@ -13,6 +14,7 @@ Package license: BSL-1.0
 Summary: SOCI is a general purpose database access library written in C++.
 
 Documentation: http://soci.sourceforge.net/doc/release/4.0/
+
 About soci-core
 ---------------
 
@@ -21,6 +23,7 @@ About soci-core
 Package license: 
 
 Summary: SOCI is a general purpose database written in C++.
+
 About soci-mysql
 ----------------
 
@@ -29,6 +32,7 @@ About soci-mysql
 Package license: 
 
 Summary: soci-mysql contains SOCI core and the implementation of MySQL backend.
+
 About soci-postgresql
 ---------------------
 
@@ -37,6 +41,7 @@ About soci-postgresql
 Package license: 
 
 Summary: soci-postgresql contains SOCI core and the implementation of PostgreSQL backend.
+
 About soci-sqlite
 -----------------
 
