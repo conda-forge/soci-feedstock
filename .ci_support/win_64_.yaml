@@ -4,6 +4,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2019
+mysql_devel:
+- '8.3'
 sqlite:
 - '3'
 target_platform:
