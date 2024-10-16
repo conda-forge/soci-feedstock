@@ -14,7 +14,7 @@ source:
     - patches/01-tests-catch.patch
 
 build:
-  number: 4
+  number: 5
 
 outputs:
   - name: soci-core
@@ -23,6 +23,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
+        - {{ stdlib("c") }}
         - cmake
         - make  # [unix]
         - ninja  # [win]
@@ -44,6 +45,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
+        - {{ stdlib("c") }}
         - cmake
         - make  # [unix]
         - ninja  # [win]
@@ -72,6 +74,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
+        - {{ stdlib("c") }}
         - cmake
         - make  # [unix]
         - ninja  # [win]
@@ -101,6 +104,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
+        - {{ stdlib("c") }}
         - cmake
         - make  # [unix]
         - ninja  # [win]
