@@ -1,5 +1,5 @@
 {% set name = "soci" %}
-{% set version = "4.0.3" %}
+{% set version = "4.1.2" %}
 {% set version_major = version.split(".")[0] %}
 {% set version_minor = version.split(".")[1] %}
 
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://github.com/SOCI/soci/archive/v{{ version }}.tar.gz
-  sha256: 4b1ff9c8545c5d802fbe06ee6cd2886630e5c03bf740e269bb625b45cf934928
+  sha256: c0974067e57242f21d9a85677c5f6cc7848fba3cbd5ec58d76c95570a5a7a15b
   patches:
     - patches/01-tests-catch.patch
 
 build:
-  number: 5
+  number: 0
 
 outputs:
   - name: soci-core
