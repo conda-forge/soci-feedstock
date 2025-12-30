@@ -14,7 +14,7 @@ source:
     - patches/01-tests-catch.patch
 
 build:
-  number: 5
+  number: 6
 
 outputs:
   - name: soci-core
