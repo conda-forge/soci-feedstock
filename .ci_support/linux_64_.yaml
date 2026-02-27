@@ -15,7 +15,7 @@ docker_image:
 libpq:
 - '18'
 mysql_devel:
-- '9.5'
+- '9.6'
 sqlite:
 - '3'
 target_platform:
