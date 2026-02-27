@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - vs2022
 mysql_devel:
-- '9.5'
+- '9.6'
 sqlite:
 - '3'
 target_platform:
