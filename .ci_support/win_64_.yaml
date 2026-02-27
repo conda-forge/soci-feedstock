@@ -5,7 +5,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- vs2022
+mysql_devel:
+- '9.5'
 sqlite:
 - '3'
 target_platform:
