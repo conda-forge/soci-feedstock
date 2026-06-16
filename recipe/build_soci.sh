@@ -51,6 +51,7 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_INSTALL_LIBDIR=lib     \
       -DSOCI_STATIC=OFF              \
       -DSOCI_LTO=OFF                 \
+      -DCMAKE_EXE_LINKER_FLAGS="-pthread" \
       "${CMAKE_BACKEND_ARGS[@]}"     \
       $SRC_DIR
 
