@@ -50,6 +50,7 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_BUILD_TYPE=Release     \
       -DCMAKE_INSTALL_LIBDIR=lib     \
       -DSOCI_STATIC=OFF              \
+      -DSOCI_LTO=OFF                 \
       "${CMAKE_BACKEND_ARGS[@]}"     \
       $SRC_DIR
 
