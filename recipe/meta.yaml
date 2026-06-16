@@ -10,8 +10,6 @@ package:
 source:
   url: https://github.com/SOCI/soci/archive/v{{ version }}.tar.gz
   sha256: 51fc3d604ec4837970c85846196ce54bde41c76f4867ae28b85269925977faf4
-  patches:
-    - patches/01-tests-catch.patch
 
 build:
   number: 0
