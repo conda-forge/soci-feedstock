@@ -44,6 +44,6 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
 make -j${CPU_COUNT}
 
 if [[ (($PKG_NAME == *"sqlite" || $PKG_NAME == *"core")) && $ARCH != "arm64" ]]; then
-	make check
+  ctest --test-dir . --output-on-failure -j${CPU_COUNT}
 fi
 make install
