@@ -23,6 +23,18 @@ case "$PKG_NAME" in
     ;;
   soci-mysql)
     CMAKE_BACKEND_ARGS+=(-DSOCI_MYSQL=ON)
+    # Workaround for SOCI 4.1.3 FindMySQL.cmake bug: pkg_search_module fails
+    # to find the conda-forge MySQL pkg-config module (name mismatch), causing
+    # the mysql_config --libs fallback to run. That stores raw -L/-l flags in
+    # MySQL_LIBRARIES, which then gets passed to IMPORTED_LOCATION — a property
+    # that expects a single file path, not a linker flag list.
+    # Pre-setting MySQL_LIBRARIES to the actual .so path bypasses that code path.
+    _mlib=$(find "$PREFIX/lib" -maxdepth 2 \
+              \( -name 'libmysqlclient.so' -o -name 'libmariadb.so' \) \
+              2>/dev/null | head -1)
+    _minc=$(mysql_config --include 2>/dev/null | sed 's/^[[:space:]]*-I//')
+    [[ -n "$_mlib" ]] && CMAKE_BACKEND_ARGS+=(-DMySQL_LIBRARIES="$_mlib")
+    [[ -n "$_minc" ]] && CMAKE_BACKEND_ARGS+=(-DMySQL_INCLUDE_DIRS="$_minc")
     ;;
   soci-postgresql)
     CMAKE_BACKEND_ARGS+=(-DSOCI_POSTGRESQL=ON)
