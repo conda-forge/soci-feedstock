@@ -30,7 +30,7 @@ case "$PKG_NAME" in
     # that expects a single file path, not a linker flag list.
     # Pre-setting MySQL_LIBRARIES to the actual .so path bypasses that code path.
     _mlib=$(find "$PREFIX/lib" -maxdepth 2 \
-              \( -name 'libmysqlclient.so' -o -name 'libmariadb.so' \) \
+              \( -name "libmysqlclient${SHLIB_EXT}" -o -name "libmariadb${SHLIB_EXT}" \) \
               2>/dev/null | head -1)
     _minc=$(mysql_config --include 2>/dev/null | sed 's/^[[:space:]]*-I//')
     [[ -n "$_mlib" ]] && CMAKE_BACKEND_ARGS+=(-DMySQL_LIBRARIES="$_mlib")
