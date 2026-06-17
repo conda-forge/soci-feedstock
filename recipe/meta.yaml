@@ -25,6 +25,8 @@ outputs:
         - cmake =3.31
         - make  # [unix]
         - ninja  # [win]
+      host:
+        - fmt
     run_exports:
       - {{ pin_subpackage('soci-core', max_pin='x.x') }}
     test:
