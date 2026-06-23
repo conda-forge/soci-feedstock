@@ -12,7 +12,7 @@ source:
   sha256: 144f017cccc2e2d806badb3313d6ab3c67a1925bccaa747a46fb3907108a615d
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: soci-core
