@@ -99,8 +99,6 @@ outputs:
 
   - name: soci-postgresql
     script: build_soci.sh  # [unix]
-    build:
-      skip: true  # [win]
     requirements:
       build:
         - {{ compiler('cxx') }}
